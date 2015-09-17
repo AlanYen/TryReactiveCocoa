@@ -14,6 +14,7 @@
 		2DFC42C51BAABCE600BA3DC5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC42C41BAABCE600BA3DC5 /* Images.xcassets */; };
 		2DFC42C81BAABCE600BA3DC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC42C61BAABCE600BA3DC5 /* LaunchScreen.xib */; };
 		2DFC42D41BAABCE700BA3DC5 /* TryReactiveCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFC42D31BAABCE700BA3DC5 /* TryReactiveCocoaTests.m */; };
+		F3B52FE3C0AD488A57EFF25A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D46333FB4547733B975F04B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		2DFC42CD1BAABCE700BA3DC5 /* TryReactiveCocoaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryReactiveCocoaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DFC42D21BAABCE700BA3DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DFC42D31BAABCE700BA3DC5 /* TryReactiveCocoaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryReactiveCocoaTests.m; sourceTree = "<group>"; };
+		4D46333FB4547733B975F04B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A05977F15BBBDAFA33A227C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EA056B5395971C1DB63BB33E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B52FE3C0AD488A57EFF25A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +71,8 @@
 				2DFC42B61BAABCE600BA3DC5 /* TryReactiveCocoa */,
 				2DFC42D01BAABCE700BA3DC5 /* TryReactiveCocoaTests */,
 				2DFC42B51BAABCE600BA3DC5 /* Products */,
+				A51E440D73E023B5A454AD19 /* Pods */,
+				CCC317F87703AD3AF4CB8830 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +126,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A51E440D73E023B5A454AD19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EA056B5395971C1DB63BB33E /* Pods.debug.xcconfig */,
+				9A05977F15BBBDAFA33A227C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCC317F87703AD3AF4CB8830 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D46333FB4547733B975F04B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DFC42D71BAABCE700BA3DC5 /* Build configuration list for PBXNativeTarget "TryReactiveCocoa" */;
 			buildPhases = (
+				E93EFE5BD2855F730B3051D7 /* Check Pods Manifest.lock */,
 				2DFC42B01BAABCE600BA3DC5 /* Sources */,
 				2DFC42B11BAABCE600BA3DC5 /* Frameworks */,
 				2DFC42B21BAABCE600BA3DC5 /* Resources */,
+				3A398FC2DA161F4A2A0E71B6 /* Embed Pods Frameworks */,
+				8C6BA20970A775E5C97ADB8D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +240,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A398FC2DA161F4A2A0E71B6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C6BA20970A775E5C97ADB8D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E93EFE5BD2855F730B3051D7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DFC42B01BAABCE600BA3DC5 /* Sources */ = {
@@ -345,9 +420,11 @@
 		};
 		2DFC42D81BAABCE700BA3DC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA056B5395971C1DB63BB33E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TryReactiveCocoa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,9 +432,11 @@
 		};
 		2DFC42D91BAABCE700BA3DC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A05977F15BBBDAFA33A227C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TryReactiveCocoa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +495,7 @@
 				2DFC42D91BAABCE700BA3DC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2DFC42DA1BAABCE700BA3DC5 /* Build configuration list for PBXNativeTarget "TryReactiveCocoaTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +504,7 @@
 				2DFC42DC1BAABCE700BA3DC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
