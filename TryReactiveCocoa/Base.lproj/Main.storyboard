@@ -82,7 +82,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SU-qA-o0v">
-                                <rect key="frame" x="183" y="146" width="234" height="60"/>
+                                <rect key="frame" x="183" y="166" width="234" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Jh0-BF-aZ7"/>
@@ -96,6 +96,16 @@
                                     <action selector="submit" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Thw-3s-NJn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AiQ-GN-egS">
+                                <rect key="frame" x="183" y="129" width="234" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="M7Q-RP-SYe"/>
+                                    <constraint firstAttribute="height" constant="21" id="bU6-BS-jCD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -109,8 +119,10 @@
                             <constraint firstItem="wu6-lM-riZ" firstAttribute="leading" secondItem="WYj-0O-e5j" secondAttribute="trailing" constant="8" id="KXp-vZ-9qU"/>
                             <constraint firstItem="Vor-Pi-NZL" firstAttribute="centerY" secondItem="jVd-7K-Pj7" secondAttribute="centerY" constant="-0.5" id="MFz-O9-o2p"/>
                             <constraint firstAttribute="centerX" secondItem="WYj-0O-e5j" secondAttribute="centerX" id="QQV-gr-P2k"/>
+                            <constraint firstAttribute="centerX" secondItem="AiQ-GN-egS" secondAttribute="centerX" id="TtP-Eu-v5N"/>
                             <constraint firstAttribute="centerX" secondItem="0SU-qA-o0v" secondAttribute="centerX" id="d4H-Sb-dUT"/>
-                            <constraint firstItem="0SU-qA-o0v" firstAttribute="top" secondItem="YMw-M3-po6" secondAttribute="bottom" constant="30" id="gbl-tz-13B"/>
+                            <constraint firstItem="0SU-qA-o0v" firstAttribute="top" secondItem="YMw-M3-po6" secondAttribute="bottom" constant="50" id="gbl-tz-13B"/>
+                            <constraint firstItem="AiQ-GN-egS" firstAttribute="top" secondItem="YMw-M3-po6" secondAttribute="bottom" constant="13" id="oM2-rD-AOe"/>
                             <constraint firstItem="YMw-M3-po6" firstAttribute="centerY" secondItem="jVd-7K-Pj7" secondAttribute="centerY" id="pbg-6s-cae"/>
                             <constraint firstItem="jVd-7K-Pj7" firstAttribute="top" secondItem="WYj-0O-e5j" secondAttribute="bottom" constant="21" id="wPg-ap-KcH"/>
                         </constraints>
@@ -119,6 +131,7 @@
                         <outlet property="submitButton" destination="0SU-qA-o0v" id="Tll-SC-aJU"/>
                         <outlet property="textField1" destination="WYj-0O-e5j" id="R4Z-TS-DTF"/>
                         <outlet property="textField2" destination="jVd-7K-Pj7" id="7Ah-ne-u1c"/>
+                        <outlet property="timeLabel" destination="AiQ-GN-egS" id="wP3-oJ-qo1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

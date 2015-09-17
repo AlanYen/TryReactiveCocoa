@@ -11,9 +11,10 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextField *textField1;
-@property (strong, nonatomic) IBOutlet UITextField *textField2;
-@property (strong, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (strong, nonatomic) NSString *test1;
 @property (strong, nonatomic) NSString *test2;
 
@@ -54,6 +55,21 @@
                       reduce:^id (NSString *test1, NSString *test2) {
                           return @(test1.length > 6 && test2.length > 6);
                       }];
+    
+    RAC(self, timeLabel.text) = [[[RACSignal interval:1.0f
+                                          onScheduler:[RACScheduler currentScheduler]]
+                                  startWith:[NSDate date]]
+                                 map:^id (NSDate *value)
+    {
+        NSLog(@"value:%@", value);
+        NSDateComponents *dateComponents =
+        [[NSCalendar currentCalendar] components:NSHourCalendarUnit|NSMinuteCalendarUnit|NSSecondCalendarUnit
+                                        fromDate:value];
+        return [NSString stringWithFormat:@"%02ld:%02ld:%02ld",
+                (long)dateComponents.hour,
+                (long)dateComponents.minute,
+                (long)dateComponents.second];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
